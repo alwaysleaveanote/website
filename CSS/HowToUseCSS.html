@@ -1,0 +1,71 @@
+<html>
+<head>
+	<title> How to use CSS and shit </title>
+</head>
+<body>
+	<h1> How to use CSS </h1>
+	<h1> How to use CSS </h1>
+	<p> CSS attributes are declared the same way HTML attributes are, except they use colons instead of =. <p>
+	<h2> In Line Styles </h2>
+	<p> These are similar to HTML tags, except they have a style attribute.  For example: <br>
+	< p style = "color: red" > text </p> gives </p>
+	<p style = "color: red"> text </p> 
+	<p> This is an ugly way to do things, though, so it should be avoided wherever possible. </p>
+
+	<h2> Internal Styles </h2>
+	<p> These are declared in the < head > section of your file and they give every specified element a <br>
+	specific attribute.  For example : <br>
+	< head > <br>
+	< style > <br>
+	p { <br>
+	color: red; <br>
+	} <br>
+	< /style > <br>
+	< /head > <br>
+	makes every paragraph red.  <br>
+	a { <br> 
+	color: blue; <br>
+	} <br>
+	makes every link blue. <br>
+	Still, though, this makes your HTML file ugle, so you usually want to separate the CSS file and the HTML file. <br>
+	This is where External styles come in </p>
+	
+	<h2> External Styles </h2>
+	<p> External styles look the same as internal styles, except they are saved in a separate .css file and only <br>
+	contain the "element { styleType }" part. If you save this .css file in the same directory as the HTML file <br>
+	that will use it, you can reference it in the head section with < link rel="stylesheet" href="style.css" > </p>
+	
+	<h2> Specificity </h2>
+	<p> If you have more than one conflicting CSS rules for the same tag, the computer follows the rule that <br>
+	more specific = greater presedence, otherwise last one takes presedence.  ids have a specificity value of 100, <br>
+	classes has a value of 10, and HTML tags have a value of 1. 
+
+	<h2> At-rules </h2> 
+	<p> at rules use the "@" sign to import other CSS files, apply CSS to particulare mediums, or embed new fonts </p>
+	
+	<h3> @import </h3>
+	<p> @import url(URL) allows you to add more than one CSS stylesheet to your page.  This is useful for complex pages where more <br>
+	than one stylesheet is cleaner and easier to read than just one.  These must be placed at the top of your HTML file </p>
+
+	<h3> @media <h3>
+	<p> @media { selector { attributes } } can be used to define attributes for different types of media.  This includes <br>
+	properties screen, print, projection, handheld, and all.  This is useful for making a mobile webpage or modifying <br>
+	your page for printing </p>
+
+	<h3> @font-face </h3>
+	<p> The font-face at rule can be used to make even non-web-safe fonts useable on your page.  It is used like <br>
+	a selector, except it essentially just creates a useable font variable.  For example, @font-face { font-family: name <br>
+	src: url(URL) } embeds a font in your webpage so you can use it from then on.  You can also add other front properties <br>
+	to your @font-face </p>
+
+	<h2> Attribute Selectors </h2>
+	<p> With attribute selectors, you can effect any element with a specific attribute using element[attribute] { ... }. <br>
+	For example, abbr[title] { border-bottom: 1px dotted } makes a dotted line under any abbreviation with a title attribute. <br>
+	You can also title only elements with attributes of a specific type (useful for input elements) using element[attribute=type] <br>
+	 attribute ^= something effects an element with an attribute beginning with the specified thing, attribute $= effects <br>
+	an element with an attribute ending with the specified thing, and attribute *= effects an element with an attribute <br>
+	containing the specified thing. </p>
+
+	 
+</body>
+</html>

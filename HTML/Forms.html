@@ -1,0 +1,121 @@
+<html> 
+<head>
+	<title> Forms and shit </title>
+</head>
+<body>
+	<h1> Forms and Getting User Input</h1> 
+	<p> Forms are used for interacting with the user and running programs based on user input. <br>
+	The < form > tag creates a form and has an action attribute and a method element. <br>
+	The action attribute is usually a script which does things with the information the user inputs into the form.
+	The method attribute describes how the information is sent.	
+	A form is usually started with something like < form action = "SCRIPT_NAME" method = post > (post means you send the info invisibly) <br>
+	I really have no clue what the hell this means, im just putting it here in case I figure it out in the future... </p>
+	
+	<p> The way the user inputs data is with < input > elements, which are usually of the form < input type = "TYPE" > <br>
+	There are a number of common input types: <br>
+	<ol>
+		<li> < input type="text" > or simply < input > is a standard textbox. 
+			This can also have a value attribute, which sets the initial text in the textbox. </li>
+			<ul>
+				<li> <input> </li>
+			</ul>
+		<li> < input type="password" > is similar to the textbox, but the characters typed in by the user will be hidden. </li>
+			<ul>
+				<li> <input type = "password"> </li>
+			</ul>
+		<li>  < input type="checkbox" > is a checkbox, which can be toggled on and off by the user.
+		 	This can also have a checked attribute (< input type="checkbox" checked > - the attribute 
+			doesn’t require a value), and makes the initial state of the check box to be switched on, as it were. </li>
+			<ul>
+				<li> <input type = "checkbox"> </li>
+				<li> <input type = "checkbox" checked> </li>
+			</ul>
+		<li> < input type="radio" > is similar to a checkbox, but the user can only select one radio 
+			button in a group. This can also have a checked attribute. </li>
+			<ul>
+				<li> <input type = "radio"> <input type = "radio"> <input type = "radio"> </li>
+			</ul>
+		<li> < input type="submit" > is a button that when selected will submit the form. 
+			You can control the text that appears on the submit button with the value attribute.
+			<ul>
+				<li> <input type = "submit"> </li>
+				<li> <input type = "submit" value = "You can change the text on the submit button with the value attribute!"> </li>
+			</ul>
+		</ol> </p>
+
+	<p> You can also create editable text boxes with < textarea rows="ROWS" cols="COLS " > TEXT_INSIDE_BOX </textarea> <br>
+	For example: </p>
+	
+	<textarea rows = "5" cols = "30"> This is my text box!  it can be edited, and it wraps automatically! </textarea>
+
+	<p> There are also drop down selection boxes which you can create using the < select > tag. <br>
+	you insert options by adding < option > <em> title of option </em> < /option >.  the form sends "title of option" to your script <br>
+	If you don't want to send the title of the option to the script, you can reassign the value of the option using the value = "" attribute <br>
+	For example: </p>
+	
+	<select>
+		<option> option 1 </option>
+		<option> option 2 </option>
+		<option> option 3 </option>
+		<option> option 4 </opotion>
+	</select> 
+
+	<p> Ordinarily, option one the default option selected, but you can change that using the 
+		selected attribute (e.g < option selected >) </p>
+	
+	<select>
+		<option> option 1 </option>
+		<option> option 2 </option>
+		<option> option 3 </option>
+		<option selected> option 4 </opotion>
+	</select>
+	
+	<p> NOTE: When you actually create a form, every element of that form must have a name attribute, otherwise you can't <br>
+	get data from it </p>
+
+	<p> each form element should have a related label tag with a for attribute equal to the id attribute of the element <br>
+	it is related to.  The label goes in front of the element.</p>
+	<label for = "test"> Test label </label> 
+	<input type = "checkbox" id = "test"> 
+
+	<p> You can create different fields in a form (address, credit card info, etc) using the < fieldset > tag. <br>
+	You can label these fields using the < legend > tag. For exampe </p>
+
+	 <fieldset>
+        	<legend>Name</legend>
+        	<p>First name <input name="firstName"></p>
+        	<p>Last name <input name="lastName"></p>
+    	</fieldset>
+    	<fieldset>
+        	<legend>Address</legend>
+        	<p>Address <textarea name="address"></textarea></p>
+        	<p>Postal code <input name="postcode"></p>
+    	</fieldset>
+
+	<p> the < optgroup > requires a label atribute and creates a dropdown selection box for options related to a <br>
+	specific thing. You can use the < optgroup > tag inside a < select > element to create furhter subclasses.  <br>
+	For example </p>
+
+	<select name="country">
+   		<optgroup label="Africa">
+        		<option value="gam">Gambia</option>
+        		<option value="mad">Madagascar</option>
+        		<option value="nam">Namibia</option>
+    		</optgroup>
+    		<optgroup label="Europe">
+        		<option value="fra">France</option>
+        		<option value="rus">Russia</option>
+        		<option value="uk">UK</option>
+    		</optgroup>
+    		<optgroup label="North America">
+        		<option value="can">Canada</option>
+        		<option value="mex">Mexico</option>
+        		<option value="usa">USA</option>
+    		</optgroup>
+	</select>
+	
+	<p> Like links, form elements can also have accesskey and tabindex attributes to make for easier navigation. </p>
+
+
+</body>
+</html>

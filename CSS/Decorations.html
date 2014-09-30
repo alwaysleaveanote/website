@@ -1,0 +1,119 @@
+<html>
+<head>
+	<title> Decorations and shit </title>
+</head>
+<body>
+
+	<h2> Colors </h2> 
+	<p> Colors can be defined in 5 ways: <br>
+	<ol>
+		<li> rgb(number, number, number) (0 < number < 256) </li>
+		<li> rgb(%, %, %) </li>
+		<li> predefined color (e.g red, blue, navy, teal, etc.) </li>
+		<li> 3 digit hexadecimal form </li>
+		<li> 6 digit hexadecimal form </li>
+	</ol> 
+	
+	NOTE: You can define color and background-color </p>
+
+	<p> CSS also allows you to change the alpha transparency and HSL (hue, saturation and lightness) values. <br>
+	to define the alpha transparency value, instead of doing color: rgb(red, green, blue) you do <br>
+	color: rgba(red, green, blue, alpha). You can also define colors using color: hsl(hue, saturatio, lightness) or <br>
+	color: hsla(hue, saturation, lightness, alpha).  You don't need to define hsl and rgb.  
+	
+
+	<h2> Borders </h2>
+	<p> To make a border around an element, all you need is a border-style.  This can take the values of solid, dotted, <br>
+	dashed, double, groove, ridge, inset and outset.  You can change the color of the border with border-color.  <br>
+	You can change the width of the border with border-width or border-top-width/border-left-width/etc. </p>
+
+	<p> You can also combine border-width/color/style into { border: width color style }.  This also works for border-top, etc </p>
+
+	<h2> Backgrounds </h2>
+	<ul>
+		<li> background-color: The color... of the background... </li>
+		<li> background-image: The location of the image: url(URL) </li>
+		<li> background-repeat: how the image repeats itself across the background <br>
+			repeat (tiles image) repeat-x, repeat-y, no-repeat </li>
+		<li> background-position: top, center, left, bottom, right, any combination, a length, or a percentage </li>
+	</ul>
+
+	<p> NOTE: You're able to define more than one background by putting them in a comma separated list. </p>
+
+	<h2> Rounded Corners </h2>
+	<h3> Circles </h2>
+	<p> Use the border-radius attribute.  You can target specific corners using border-top/bottom-left/right-radius <br>
+	of border-radius: 4 values (going clockwise from top left) OR 3 values (top left, everything else), OR 2 values <br>
+	(top left, bottom right, everything else). </p>
+
+	<h3> Ellipse </h3> 
+	<p> Instead of defining circles, you can also define elipses using border-radius: horiz radius/ver radius </p>
+
+	<h2> Shadows </h2>
+	<p> To define a shoadow for a box you use box-shadow: horizontal-offset vertical-offset blur-radius spread-distance color <br>
+	horizontal and vertical offset are how far the shadow is nudged right/up.  blur radius defines how sharp the shadow is <br>
+	lower = sharper.  spread distance is how large the shadow is.  You can also make shadows inside the box using the inset
+	property.  There is also a text-shadow attribute, which is the same as box-shadow except it effects text. </p>	
+
+	<h2> Basic Animations </h2>
+	<p> CSS allows you to add basic animations to specific transitions.  You can use transition-property (which <br>
+	properties will be transitioned), transition-duration, transition-timing-function (acceleration function), <br>
+	and transition-delay.  These can all be put into the shorthand <em> transition: </em>.  This has to be combined <br>
+	with different states of the element.  For example, for a link to transition, you have to have the base state <br>
+	(unclicked) which contains the transition attribute, and a different state (hover, etc) with different attributes. <br>
+	You can also make different rules for different changing attributes.  For example, you can make one transition attribute <br>
+	for color and one for text size and background. </p>
+	
+	<p> NOTE: Transitions don't work in all browsers.  To add a few more browsers, redeclare your transition attribute with <br>
+	-webkit-transition name.  </p>
+
+	<h2> Transform </h2> 
+	<p> The transform attribute allows you to rotate, skew, scale, and translate a box. </p>
+
+	<h3> Rotating </h3> 
+	<p> transform: rotate(xdeg) will rotate everything in your box x degrees. </p>
+	
+	<h3> Skewing </h3>
+	<p> transform: skew(xdeg, ydeg) will tilt everything x degrees horizontally and y degrees vertically </p>
+	
+	<h3> Scaling </h3>
+	<p> transform: scale(number) will multiply the size of the box and everything in it by the number.  You can also <br>
+	define horizontal and vertical scaling with scale(number, number). </p>
+	
+	<h3> Translating </h3>
+	<p> transform: translate(number1, number1) will translate everything number1 right and number2 down.  Similar to <br>
+	position: relative; left: 100px; top: 200px.  
+
+	<h3> Matrices </h3>
+	<p> You can also define a matrix function which rotates, skews, scales, and translated.  It takes in 6 numbers </p>
+
+	<h3> Origin </h3>
+	<p> You can also define where the origin for your transformation is in x and y coords (or use top, bottom, left, right). </p>
+	
+	<h2> Gradients </h2>
+	<h3> Linear Gradient </h3>
+	<p> Use the background or background-image property and define a linear-gradient() value.  This can contain 2 colors <br>
+	for an even fade from one to the next from top to bottom.  If you want your colors to start and end in different places, <br>
+	you can add a to direction (or more than one direction) where the second color will end.  Instead of to direction <br>
+	you can also use xdeg to make it fade at any angle.  You can also have more than one color.  </p>
+		
+	<p> NOTE: this doesn't work in all browsers, so you will also want to add a background: -webkit-linear-gradient() with the <br>
+	same information as background: linear-gradient().   webkit doesn't use the to keyword, just the direction. </p>
+	
+	<h3> Radial Gradient </h3>
+	<p> Radial gradients are defined in much the same way as linear gradients, except they start in the center of the box <br>
+	and spread elliptically to the edges.  You can change the way the spread looks in the same way you could change <br>
+	the way the spread of a linear gradient looked, except you use a shape keyword (usually circle) or where the first color <br>
+	starts (<em> at direcction </em>). </p>
+
+	<p> You can also define where each color starts by adding a color stop - a distance or percentage directly after <br> 
+	the color declaration (no comma).  </p>
+
+	<h3> Repeating Linear/Radial Gradient </h3>
+	<p> A repeating linear gradient must be used in conjunction with a color stop and starts over again after the <br>
+	the last color stop </p>
+
+
+
+</body>
+</html>

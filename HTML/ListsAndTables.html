@@ -1,0 +1,124 @@
+<html> 
+<head>
+	<title> Lists and Tables and shit </title>
+</head>
+<body>
+	<h1> Lists and Tables </h1>
+	<h2> Lists </h2>
+	<p> There are ordered lists (< ol >) which are numbered, and unordered lists (< ul >) which are bulletted. <br>
+	You define an element of a list using the in line < li > tag. For example: </p>  
+
+	<ul>
+		<li> Unordered list element! </li>
+		<li> Another unordered list element! </li>
+		<li> Woah, gonna make an ordered list inside an unordered list! </li>
+			<ol>
+				<li> One! </li>
+				<li> Two! </li>
+				<li> Three! </li>
+			</ol>
+	</ul>
+
+	<p> Along with ordered lists and unordered lists, there are also definition lists <br>
+	essentially uses the same syntax, except < dl > initializes the list, < dt > are the terms, <br>
+	and < dd > are the definitions of those terms. For example: </p>
+	<dl>
+		<dt> This is a term.
+		<dd> This is a definition. It's indented!
+		<dd> You can put more than one definition!
+
+		<dt> Another Term!
+		<dd> Only one definition this time.
+	</dl>
+
+	<h2> Tables </h2> 
+	<p> Use the < table > tag to initiate a new table. <br>
+	Within a table, use < tr > to create a new row. <br>
+	Within in a table row use < td > to create a new cell. <br>
+	Elements are not broken up by anything (commas, brackets, lines, etc.) <br>
+	For example: </p>
+
+	<table>
+   		 <tr>
+        		<td> (1, 1) </td>
+     		   	<td> (1, 2) </td>
+      		 	<td> (1, 3) </td>
+   		 </tr>
+   		 <tr>
+       			<td> (2, 1) </td>
+       			<td> (2, 2) </td>
+        		<td> (2, 3) </td>
+   		 </tr>
+   		 <tr>
+    			<td> (3, 1) </td>
+        		<td> (3, 2) </td>
+       			<td> (3, 3) </td>
+    		</tr>
+    		<tr>
+        		<td> (4, 1) </td>
+        		<td> (4, 2) </td>
+        		<td> (4, 3) </td>
+    		</tr>
+	</table>
+
+	<p> can define headers for headers using the < th > tag.  It is used the same and looks the same as < td > <br>
+	but means that the data in that cell is a header the column, not an actual piece of data. <br>
+	the colspan and rowspan attributes essentially merge two cells one column or one row apart together. For example: </p>
+
+	<table>
+   		 <tr>
+        		<th> header 1 </td>
+     		   	<th> header 2 </td>
+      		 	<th> header 3 </td>
+   		 </tr>
+   		 <tr>
+       			<td> (2, 1) </td>
+       			<td colspan = "2">  (2, 2 AND 3) </td>
+   		 </tr>
+   		 <tr>
+    			<td rowspan = "2"> (3 AND 4, 1) </td>
+        		<td> (3, 2) </td>
+       			<td> (3, 3) </td>
+    		</tr>
+    		<tr>
+        		<td> (4, 2) </td>
+        		<td> (4, 3) </td>
+    		</tr>
+	</table>
+
+	<p> To change the formatting of a column, use the < colgroup > (not inline) and < col > (inline, unpaired) tags. <br>
+	withing a < colgroup > tag, the first < col > element is the first column, the second < col > element is the <br>
+	second column, etc.  < col > tags can have a class attribute (class = "alternative" for example) and a span attribute <br>
+	which combines 2 or more columns (span = "2").  It is similar to < colspan > except works for every row. </p>
+	
+	<table>
+		<colgroup> 
+			<col> 
+			<col span = "2" style = "alternative">
+   		 <tr>
+        		<td> (1, 1) </td>
+     		   	<td> (1, 2 AND 3) </td>
+   		 </tr>
+   		 <tr>
+       			<td> (2, 1) </td>
+       			<td> (2, 2 AND 3) </td>
+   		 </tr>
+   		 <tr>
+    			<td> (3, 1) </td>
+        		<td> (3, 2 AND 3) </td>
+    		</tr>
+    		<tr>
+        		<td> (4, 1) </td>
+        		<td> (4, 2 AND 3) </td>
+    		</tr>
+	</table>
+
+	<p> You can also add a caption to your table by using the < caption > (inline, paired) tag right after <br>
+	you declare the opening < table > tag. </p>
+
+	<p> To make the table easier to read in HTML for, you can use the < thead >, < tbody >, and < tfoot > tags.  
+	< thead > always comes first, but < tfoot > can come before < tbody > (though it will be rendered after < tbody >) </p>
+
+
+</body>
+</html>

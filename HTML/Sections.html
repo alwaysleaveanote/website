@@ -1,0 +1,86 @@
+<html> 
+<head>
+	<title> Sections and shit </title>
+</head>
+<body>
+	<h1> Sections </h1>
+	<h2> Headlines </h2>
+	<p> There are 6 headline options < h1 > through < h6 > which create headlines in different sizes. <br>
+	They are separated by one line of white space. </p>
+
+	<h2> Articles </h2>
+	<p> the < article > tag is used to define sections of the page devoted to an "article" (blog post, newspaper, etc) <br>
+	Articles have a more general < section > tag (with id attribute to give a name to the section you are defining) which <br>
+	breaks the article up into more general sections (e.g page, chapter, etc).  Neither of these tags are in line. <br>
+	There is a white line between each different section in an article. </p>
+	<article>
+    		<section id="intro">
+       			<p>[An introduction]</p>
+   		 </section>
+   		 <section id="main_content">
+        		<p>[Content]</p>
+    		</section>
+    		<section id="related">
+        		<ul>
+           			<li>Related article 1</li>
+            			<li>Related artivle 2</li>
+        		</ul>
+    		</section>
+	</article>
+	
+	<p> You can also add < header > tags and < footer > tags. </p>
+	<article>
+		<header> 
+			<p> This is a header! </p>
+		</header>
+    		<section id="intro">
+       			<p>[An introduction]</p>
+   		 </section>
+   		 <section id="main_content">
+        		<p>[Content]</p>
+    		</section>
+    		<section id="related">
+        		<ul>
+           			<li>Related article 1</li>
+            			<li>Related artivle 2</li>
+        		</ul>
+    		</section>
+		<footer> 
+			<p> This is a footer! </p>
+		</footer>
+	</article>
+
+	<p> There is also an < aside > tag for extra information about the article </p>
+	<article>
+		<header> 
+			<p> This is a header! </p>
+		</header>
+    		<section id="intro">
+       			<p>[An introduction]</p>
+   		 </section>
+		<aside>
+			<p> Here's some extra information about the introduction </p>
+		</aside>
+   		 <section id="main_content">
+        		<p>[Content]</p>
+    		</section>
+    		<section id="related">
+        		<ul>
+           			<li>Related article 1</li>
+            			<li>Related artivle 2</li>
+        		</ul>
+    		</section>
+		<footer> 
+			<p> This is a footer! </p>
+		</footer>
+	</article>
+	
+	<p> adding figures to an article is the same as adding the figure to your webpage, except you enclose it in the <br>
+	< figure > (not inline) tag.  You can add a caption using the < figcaption > tag.  Adding hyperlinks is also the same <br>
+	as adding links, except you enclose it in the < nav > (not inline) tag.  Both of these tags have id attributes because <br>
+	they are considered sections of the article </p>
+
+
+
+</body>
+</html>

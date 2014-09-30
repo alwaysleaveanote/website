@@ -1,0 +1,21 @@
+body {
+	
+	background: url("wallpaper 3.png") no-repeat center;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+}
+
+h2 {
+	background: grey;
+	border: inset 2px;
+	display: inline;
+}
+
+a {
+	color: white;
+}
+
+a:visited {
+	color: purple;
+} 
