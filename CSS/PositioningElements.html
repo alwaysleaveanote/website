@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<title> Positioning Elements </title>
+		<link rel="stylesheet" href="../subDirectoryStyle.css">
+	</head>
+	<body>
+		<main>
+			<header>
+				<a href = "../index.html"><h1 id = "myName"> Alex Gingras </h1></a>
+				<section id = "links">
+					<ul>	
+						<li><a href = "../index.html">Home</a></li>
+						<li><a href = "../CrimeProject/Project.html">Seattle Crime Project</a></li>
+						<li><a href = "../Info343/InfoProjectHomepage.html">Info 343 Projects</a></li>
+						<li><a href = "../Notes.html">HTML/CSS Notes</a></li>
+					</ul>
+				</section>
+			</header>
+			<h2> Margins and Padding </h2>
+			<p> margin and padding are both properties.  margin determines the space outside something whereas padding determines <br>
+			the space inside something. You can visualize margins and paddings with the box model.  You can also declare margin-top, padding-top, etc.  This box model can be applied to every element on a page. </p>
+
+			<p> There are also shorthands for margins and paddings.  { margin: 10px 5px 2px 1px } makes margin-top = 10px <br>
+			margin-right 5px, margin-bottom 2px and margin-left 1px.  { margin: 10px 5xp } makes margin-top and margin-bottom 10px <br>
+			and margin-left and margin-right 5px. 
+			
+			<h2> Display </h2> 
+			<p> display is a selector which usually have the values inline, box, or none.  Inline makes elements display <br>
+			with normal line flow.  block gives an element its own "block" of space, but it can also be declared inline <br>
+			for a more dynamic use.  none makes the element invisible. display: none gets rid of the element from the flow <br>
+			entirely, while visibility: hidden simply hides the element, leaving it in the flow. </p>
+
+			<h2> Positioning </h2>
+			<p> the position property declares where an element is in reference to where it would be in the normal <br>
+			flow of the page.  There are four values the position property can have: static, fixed, relative, and absolute. <br>
+			This property allows elements to overlap.  You can change the overlapping order by using the z-index property. <br>
+			The element with a lower z-index will be behind the element with a higher z-index.  If a z-index is not specified <br>
+			the element which is created last will be on top.  </p>
+			<ul>
+				<li> static: positioned according to the normal flow of the page.  not affected by top, bottom, left, <br>	
+				and right properties </li>
+				<li> fixed: the element does not move even when the page is scrolled </li>
+				<li> relative: positions the element relative to where it would be in the normal flow of the page </li>
+				<li> absolute: positioned relative to the first parent element that has a position value other than static.<br>
+				the other elements in the page ignore this element.  It does not effect the flow of the page. </li>
+			</ul>	
+			
+			<p> After you declare a position property, you can declare a top, bottom, left, or right property which can have values <br>
+			equal to a length or percentage, which determines how far from the top/bottom/left/right of the page the element is. </p>
+		</main>
+	</body>
+</html>

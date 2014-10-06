@@ -1,0 +1,63 @@
+<html> 
+	<head>
+		<title> Links and Pictures </title>
+		<link rel="stylesheet" href="../subDirectoryStyle.css">
+	</head>
+	<body>
+		<main>
+			<header>
+				<a href = "../index.html"><h1 id = "myName"> Alex Gingras </h1></a>
+				<section id = "links">
+					<ul>	
+						<li><a href = "../index.html">Home</a></li>
+						<li><a href = "../CrimeProject/Project.html">Seattle Crime Project</a></li>
+						<li><a href = "../Info343/InfoProjectHomepage.html">Info 343 Projects</a></li>
+						<li><a href = "../Notes.html">HTML/CSS Notes</a></li>
+					</ul>
+				</section>
+			</header>
+			<h1> Links and Pictures </h1>
+			<h2> Links </h2>
+			<p> To add a hyperlink to something use anchor tag < a href = "URL" > words to be linked < /a >.  Pretty simple. <br>
+			Note that <a href = "http://tinyurl.com/"> tinyurl.com </a> can make your html a lot prettier. <br>  
+			<a = "http://www.youtube.com/watch?v=rLw-9dpHtcU&list=FLPIA2vo4kWnNCIPkfBQh_5A&index=6"> Here</a>'s a funny video! </p>
+			
+			<p> you can also link to other pages in your websites file directory using the same method < a href = "FILE_NAME.html > words to be linked < /a> <br>
+			For example, <a href = "index.html"> here</a>'s a link back to the homepage. </p>
+			
+			<p> You can not inherantly tab through picture, you have to provide a tabindex attribute to an anchor tag.  <br>
+			The syntax is tabindex = "1/2/3/etc." </p>
+
+			<p> You can also add a linktitle attribute to an anchor tag if the text your anchor encloses doesnt sufficientoy <br>
+			explain where the link will take you </p>
+			
+			<p> There is also a accesskey attribute, so when the user presses ctrl + accesskey, it will take them to that link </p>
+
+			<p> using the < a href = "#content > tag will skip to the < section > of your page with the attribute "content" </p>
+
+			
+			<h2> Pictures </h2>
+			<p> Pictures added in a similar way to links.  < img src = "URL OR LOCATION_IN_FILE_DIRECTORY" > <br>
+			This shows the picture on your page as the same size that it is in the link.  You can use ther <br>
+			width and height attributes to change this. <br>
+			For example, here's my favorite meme: </p>
+			<img src = "http://s3.amazonaws.com/rapgenius/1347791834_whatcha-thinking-about-war-stuff-12862281334.jpg"
+			 	width = "200" height = "400" alt = "meme"> <br>
+
+			<h2> Videos </h2>
+			<p> You can imbed videos much the same you you imbed picture, except instead of the < img > tag, you use the < video > tag. <br>
+			There is also the control attribute (which allows the user to choose whether or not to play the video) and the <br>
+			autoplay attribute (which plays the video automatically.  Because some people are dicks.) videos also have height <br>
+			and width attributes, which initialize to the original videos height and width. </p>
+
+			NOTE: This does not work with youtube videos (like the one below).  You have to copy the embed code under share. </p>
+			<iframe width="560" height="315" src="//www.youtube.com/embed/3r7m0zXydhY" frameborder="0" allowfullscreen></iframe>
+
+			<p> Sometimes specific types of videos don't work with specific browsers.  In this case, you can create more than one <br>
+			source for the video which the browser will try.  Looks like < video > < source src = "source" > < /video > </p>
+
+			<h2> Audio </h2>
+			Audio is the same as video except with the < audio > tag. 
+		</main>
+	</body>
+</html>
