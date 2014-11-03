@@ -1,8 +1,8 @@
 @import url('http://fonts.googleapis.com/css?family=Open+Sans:400,300');
 @import url('http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
 
-html {
-	background: url(img/Background.jpg) no-repeat center center fixed; 
+body {
+	background: url(../img/Background.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     moz-background-size: cover;
     -o-background-size: cover;
@@ -29,34 +29,17 @@ a:hover {
 	color: #000000;
 }
 
-div#rightToolbar {
-	float: right;
-	margin-top: 14%;
-	width:35%%;
-}
-
-img#profilePic {
-	width: 80%;
-	display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-section#socialMedia ul {
-	text-align: center;
-}
-
 ul {
 	list-style-type: none;
 	padding-left: 0;
 }
 
+
 header {
 	font-family: "Open Sans", Helvetica, sans-serif;
 	font-size: 14px;
 	float: left;
-	width: 65%;
+	width: 100%;
 	margin-bottom: 20px;
 }
 
@@ -89,12 +72,35 @@ section#links li + li::before {
 	content: " | ";
 }
 
-#socialMedia li {
-	display: inline;
+#Maps {
+	position: relative;
+	margin-top: -10%;
+	margin-left: -10%;
 }
 
-#socialMedia img {
-	width: 30px;
-	height: 30px;
-	background-color: #FFFFFF;
+#BeatsMap {
+	z-index: 2;
+}
+
+.Map {
+	position: absolute;
+}
+
+
+#graphsTitle {
+	text-align: center;
+}
+
+#graphs {
+	width: 100%;
+}
+
+#googleMapsTitle {
+	text-align: center;
+}
+
+#googleMapsFrame {
+	visibility: hidden;
+	width: 100%;
+	height: 750px;
 }
